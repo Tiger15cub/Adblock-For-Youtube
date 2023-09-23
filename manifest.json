@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "scripts/unistream.chrome.mv2.v3.0.0.sdk.js", "scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon-19.png",
+         "38": "images/icon-38.png"
+      },
+      "default_popup": "pages/popup.html",
+      "default_title": "Adblock for Youtube™"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "scripts/contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extension_description__",
+   "differential_fingerprint": "1.b755aeb9f65ff5ef6ae76ab54c33e00844769abe2f777a8310de6b85029488de",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/WmzFe8hcRH9QeTBEDo8cH/4IYaw4DpiYlK6lUlXUPmEX8kkFfugsFMjlqVqHJN44Vhhz0gEWpyxWDYMfMPaJo1lXVGp/PBkf22QjvSvfAeWTGzhCo9020ysg3FeEEztm7yK50qkSNCgqsdRSdZKgy8dqF6YSouJRcYB6y5CZhwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extension_name__",
+   "permissions": [ "storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.3.0"
+}
